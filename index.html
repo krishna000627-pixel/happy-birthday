@@ -51,61 +51,9 @@
                     <img src="img/cake.gif" alt="">
                 </div>
 
-                <!-- Thank You Section -->
-                <div class="col-12 text-center thank-you-section">
-                    <button class="btn-thank-you" id="thankYouBtn">Thank You 💝</button>
-                    
-                    <div class="questions-container" id="questionsContainer" style="display: none;">
-                        
-                        <!-- Question 1 -->
-                        <div class="question-box">
-                            <h3>❓ Did you like the wish?</h3>
-                            <div class="options">
-                                <button class="option-btn" onclick="selectAnswer('q1', 'Yes!!! 🎉')">Yes!!! 🎉</button>
-                                <button class="option-btn" onclick="selectAnswer('q1', 'It was Okay')">It was Okay</button>
-                                <button class="option-btn" onclick="selectAnswer('q1', 'Needs Improvement')">Needs Improvement</button>
-                            </div>
-                            <div class="selected-answer" id="q1-answer"></div>
-                        </div>
-
-                        <!-- Question 2 -->
-                        <div class="question-box">
-                            <h3>❓ How was your birthday?</h3>
-                            <div class="options">
-                                <button class="option-btn" onclick="selectAnswer('q2', 'Awesome! Best day ever')">Awesome! Best day ever 🎊</button>
-                                <button class="option-btn" onclick="selectAnswer('q2', 'Good')">Good 😊</button>
-                                <button class="option-btn" onclick="selectAnswer('q2', 'Could be better')">Could be better 😔</button>
-                            </div>
-                            <div class="selected-answer" id="q2-answer"></div>
-                        </div>
-
-                        <!-- Question 3 -->
-                        <div class="question-box">
-                            <h3>❓ Will you celebrate next birthday with me?</h3>
-                            <div class="options">
-                                <button class="option-btn" onclick="selectAnswer('q3', 'Definitely! 🤗')">Definitely! 🤗</button>
-                                <button class="option-btn" onclick="selectAnswer('q3', 'Maybe...')">Maybe... 🤔</button>
-                                <button class="option-btn" onclick="selectAnswer('q3', 'Perhaps later')">Perhaps later ⏰</button>
-                            </div>
-                            <div class="selected-answer" id="q3-answer"></div>
-                        </div>
-
-                        <!-- Gift Code Section -->
-                        <div class="gift-code-box">
-                            <h3>🎁 Get Free Gift 🎁</h3>
-                            <p>Send your answers along with the code below to my DM to claim your free gift!</p>
-                            
-                            <div class="code-display">
-                                <span id="giftCode">FC22L</span>
-                                <button class="copy-btn" onclick="copyCode()">📋 Copy</button>
-                            </div>
-                            
-                            <p class="gift-instruction">
-                                💌 Message me on Instagram/WhatsApp with your answers + code to get your gift! 🎉
-                            </p>
-                        </div>
-
-                    </div>
+                <!-- Continue to Questions Button -->
+                <div class="col-12 text-center" style="margin-top: 40px; margin-bottom: 30px;">
+                    <a href="questions.html" class="btn-next-page">Continue → 💝</a>
                 </div>
 
             </div>
@@ -117,41 +65,5 @@
 <script src="js/jquery.js"></script>
 <script src="js/typed.min.js"></script>
 <script src="js/script.js"></script>
-
-<!-- Thank You Section Script -->
-<script>
-    // Toggle thank you section
-    document.getElementById('thankYouBtn').addEventListener('click', function() {
-        const container = document.getElementById('questionsContainer');
-        const btn = this;
-        
-        if (container.style.display === 'none') {
-            container.style.display = 'block';
-            btn.textContent = 'Hide Questions ❌';
-        } else {
-            container.style.display = 'none';
-            btn.textContent = 'Thank You 💝';
-        }
-    });
-
-    // Handle answer selection
-    function selectAnswer(questionId, answer) {
-        const answerDiv = document.getElementById(questionId + '-answer');
-        answerDiv.textContent = '✓ You selected: ' + answer;
-    }
-
-    // Copy gift code to clipboard
-    function copyCode() {
-        const code = document.getElementById('giftCode').textContent;
-        navigator.clipboard.writeText(code).then(function() {
-            const btn = event.target;
-            const originalText = btn.textContent;
-            btn.textContent = '✓ Copied!';
-            setTimeout(function() {
-                btn.textContent = originalText;
-            }, 2000);
-        });
-    }
-</script>
 
 </html>
