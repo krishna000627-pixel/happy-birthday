@@ -6,7 +6,8 @@ var url_string = window.location.href; //window.location.href
 var url = new URL(url_string);
 var c = url.searchParams.get("name");
 console.log(c);
-if (c != null) {
+// Only override if name parameter is explicitly provided in URL
+if (c != null && c !== "") {
     document.getElementById("name").innerHTML = c;
     document.getElementById("nae").innerHTML = c;
 }
