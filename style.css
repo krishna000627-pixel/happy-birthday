@@ -128,15 +128,10 @@ img {
     padding-top: 250px;
 }
 
-/* Thank You Section Styles */
-.thank-you-section {
-    margin-top: 50px;
-    padding-bottom: 50px;
-}
-
-.btn-thank-you {
-    padding: 15px 40px;
-    font-size: 24px;
+/* Next Page Button */
+.btn-next-page {
+    padding: 18px 50px;
+    font-size: 22px;
     font-weight: bold;
     color: white;
     background: linear-gradient(135deg, #FF6B9D, #FF1493);
@@ -147,20 +142,59 @@ img {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.btn-thank-you:hover {
+.btn-next-page:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(255, 107, 157, 0.6);
     background: linear-gradient(135deg, #FF1493, #FF6B9D);
+    color: white;
+    text-decoration: none;
 }
 
-.btn-thank-you:active {
+.btn-next-page:active {
     transform: translateY(-1px);
 }
 
-.questions-container {
-    margin-top: 30px;
+/* Back Button */
+.btn-back {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-back:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.6);
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    color: white;
+    text-decoration: none;
+}
+
+/* Questions Page */
+.questions-page {
+    background-color: #FFDAB9;
+    min-height: 100vh;
+}
+
+.question-box {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #FF1493;
     animation: slideIn 0.5s ease;
 }
 
@@ -173,15 +207,6 @@ img {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.question-box {
-    background: white;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #FF1493;
 }
 
 .question-box h3 {
@@ -237,11 +262,12 @@ img {
     text-align: center;
     border: 3px dashed #FF1493;
     box-shadow: 0 6px 20px rgba(255, 20, 147, 0.2);
+    animation: slideIn 0.5s ease;
 }
 
-.gift-code-box h3 {
+.gift-code-box h2 {
     color: #FF1493;
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 15px;
     font-weight: bold;
 }
@@ -313,6 +339,10 @@ img {
     
     .gift-code-box {
         padding: 20px;
+    }
+    
+    .gift-code-box h2 {
+        font-size: 24px;
     }
     
     #giftCode {
